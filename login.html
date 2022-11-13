@@ -6,9 +6,11 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Budget Planner</title>
+    <title>Sign-in</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cheatsheet/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+    
 
     <!-- Bootstrap core CSS -->
 <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,10 +31,11 @@
       }
     </style>
 
+    
     <!-- Custom styles for this template -->
-    <link href="css/budgetplanner.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -104,16 +107,16 @@
                     </li> -->
 
                     <li class="nav-item">
-                      <a href="budgetplanner.html" class="nav-link active">
-                        <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#calculator"/></svg>
-                        Budget Planner
+                      <a href="blog.html" class="nav-link">
+                        <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#blog"/></svg>
+                       Blog
                       </a>
                     </li>
 
                     <li class="nav-item">
-                      <a href="blog.html" class="nav-link">
-                        <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#blog"/></svg>
-                       Blog
+                      <a href="budgetplanner.html" class="nav-link">
+                        <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#calculator"/></svg>
+                        Budget Planner
                       </a>
                     </li>
 
@@ -131,105 +134,33 @@
         </div>
       </div>
     </header>
-
-
     <div class="b-example-divider"></div>
+    <div class="text-center">
+    <main class="form-signin">
+      <form>
+        <img class="mb-4" src="images/logo.png" alt="" width="100%" height="110">
+        <h1 class="h3 mb-3 fw-normal"><i>Please sign in</i></h1>
 
-    <div class="container">
+        <div class="form-floating">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
 
-          <h2 class="budget-title">Budget Planner</h2>
-        <div class="budget-text"><p>We want to help you know exactly where your money is being spent, and how much you've got coming in. Knowing where every pound is being spent is a great first step to starting your savings, getting out of debt or preparing for retirement. Our Budget Planner can help.
-          </p>
-          <p>We'll give you:</p>
-          <ul>
-          <!-- <li>a place to record all your spending, so you won’t forget anything</li>  -->
-          <li>a breakdown of your finances by category</li> 
-          <li>personalised tips when you're all finished.</li></ul></div>
-          <!-- <div class="b-example-divider"></div> -->
-      <div class="bd-cheatsheet container-fluid bg-body">
-        <section id="forms">
-        
-          <article class="" id="validation">
-            <div class="expenses">
-              <div class="bd-example">
-              <form class="col-md-12 row">
-                <div class="col-md-6">
-                  <label for="monthly-income" class="form-label"><b>Monthly Income After Tax</b></label>
-                  <p class="expenses-description">This is the total you receive every month. It could include your wages, benefit payments, pensions, dividends, and other incomings</p>
-                  <input type="number" class="form-control" id="validationServer01"required>
-                  <!-- <div class="valid-feedback">
-                    Looks good!
-                  </div> -->
-                </div>
-
-                <div class="col-md-6 ">
-                  <label for="housing" class="form-label"><b>Housing</b></label>
-                  <p class="expenses-description">Your share of your rent or mortgage and utility bills (including council tax, electricity, gas and water)</p>
-                  <input type="number" class="form-control" id="validationServer02" required>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="insurance" class="form-label"><b>Insurance</b></label>
-                  <p class="expenses-description">Life, car, phone, pet and home insurance</p>
-                  <input type="number" class="form-control" id="validationServer03" required>
-                </div>
-
-                <div class="col-md-6" >
-                  <label for="grociers" class="form-label"><b>Grociers</b></label>
-                  <p class="expenses-description">Food including dependents and pets</p>
-                  <input type="number" class="form-control" id="validationServer04" required>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="media-entertainment" class="form-label"><b>Media and Entertainment</b></label>
-                  <p class="expenses-description">Internet, TV licence and phone contract</p>
-                  <input type="number" class="form-control" id="validationServer05" required>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="debt-repayments" class="form-label"><b>Debt repayments</b></label>
-                  <p class="expenses-description">Loan, credit card and finance repayments</p>
-                  <input type="number" class="form-control" id="validationServer06" required>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="other-essentials" class="form-label"><b>Other essentials</b></label>
-                  <p class="expenses-description">Childcare, school fees and transport (including fuel, maintenance, tax, 
-                    public transport) and any other outgoings that are part of your essential monthly spending</p>
-                  <input type="number" class="form-control" id="validationServer07" required>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="lifestyle-cost" class="form-label"><b>Lifestyle costs</b></label>
-                  <p class="expenses-description">Takeaways, hair appointments, socialising, gym membership, streaming services, gaming etc.<br>&nbsp</p>
-                  <input type="number" class="form-control" id="validationServer08" required>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="savings" class="form-label"><b>Savings</b></label>
-                  <p class="expenses-description">Contributions to savings each month</p>
-                  <input type="number" class="form-control" id="validationServer09">
-                </div>
-
-                <div class="col-md-6 d-grid">
-                  <label for="calculating" class="form-label"><b></b></label>
-                  <p class="calculate-button">&nbsp</p>
-                  <button class="btn" type="submit">Calculate</button>
-                </div>
+        <!-- <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div> -->
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2022 Team Magenta - Code First Girls</p>
+      </form>
+    </main>
 
 
-                  <!-- <div class="invalid-feedback">
-                    Please provide a valid city.
-                  </div> -->
-                </div>
-                
-              </form>
-              </div>
-            </div>
-          </article>
-        </section>
-      </div>
-    </div>
-<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </div>   
   </body>
 </html>
