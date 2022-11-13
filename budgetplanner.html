@@ -131,100 +131,105 @@
         </div>
       </div>
     </header>
-  
-<div class="bd-cheatsheet container-fluid bg-body">
-  <section id="forms">
-    <article class="col-md-12" id="overview">
-      <div>
-        <div class="bd-example">
-        <form>
-          <div class="col-md-12">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          </div>
-          <div class="col-md-12">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-        </form>
-        </div>
-      </div>
-    </article>
-    <article class="" id="input-group">
-      <div>
-        <div class="bd-example">
-        <div class="input-group col-md-12">
-          <span class="input-group-text">£</span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-          <span class="input-group-text">.00</span>
-        </div>
-        </div>
-      </div>
-    </article>
-    <article class="col-md-12" id="validation">
-      <div>
-        <div class="bd-example">
-        <form class="row g-3">
-          <div class="col-md-12">
-            <label for="validationServer01" class="form-label">First name</label>
-            <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-          </div>
-          <div class="col-md-12">
-            <label for="validationServer02" class="form-label">Last name</label>
-            <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-          </div>
-          <div class="col-md-12">
-            <label for="validationServerUsername" class="form-label">Username</label>
-            <div class="input-group has-validation">
-              <span class="input-group-text" id="inputGroupPrepend3">@</span>
-              <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
-              <div class="invalid-feedback">
-                Please choose a username.
+
+
+    <div class="b-example-divider"></div>
+
+    <div class="container">
+
+          <h2 class="budget-title">Budget Planner</h2>
+        <div class="budget-text"><p>We want to help you know exactly where your money is being spent, and how much you've got coming in. Knowing where every pound is being spent is a great first step to starting your savings, getting out of debt or preparing for retirement. Our Budget Planner can help.
+          </p>
+          <p>We'll give you:</p>
+          <ul>
+          <!-- <li>a place to record all your spending, so you won’t forget anything</li>  -->
+          <li>a breakdown of your finances by category</li> 
+          <li>personalised tips when you're all finished.</li></ul></div>
+          <!-- <div class="b-example-divider"></div> -->
+      <div class="bd-cheatsheet container-fluid bg-body">
+        <section id="forms">
+        
+          <article class="" id="validation">
+            <div class="expenses">
+              <div class="bd-example">
+              <form class="col-md-12 row">
+                <div class="col-md-6">
+                  <label for="monthly-income" class="form-label"><b>Monthly Income After Tax</b></label>
+                  <p class="expenses-description">This is the total you receive every month. It could include your wages, benefit payments, pensions, dividends, and other incomings</p>
+                  <input type="number" class="form-control" id="validationServer01"required>
+                  <!-- <div class="valid-feedback">
+                    Looks good!
+                  </div> -->
+                </div>
+
+                <div class="col-md-6 ">
+                  <label for="housing" class="form-label"><b>Housing</b></label>
+                  <p class="expenses-description">Your share of your rent or mortgage and utility bills (including council tax, electricity, gas and water)</p>
+                  <input type="number" class="form-control" id="validationServer02" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="insurance" class="form-label"><b>Insurance</b></label>
+                  <p class="expenses-description">Life, car, phone, pet and home insurance</p>
+                  <input type="number" class="form-control" id="validationServer03" required>
+                </div>
+
+                <div class="col-md-6" >
+                  <label for="grociers" class="form-label"><b>Grociers</b></label>
+                  <p class="expenses-description">Food including dependents and pets</p>
+                  <input type="number" class="form-control" id="validationServer04" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="media-entertainment" class="form-label"><b>Media and Entertainment</b></label>
+                  <p class="expenses-description">Internet, TV licence and phone contract</p>
+                  <input type="number" class="form-control" id="validationServer05" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="debt-repayments" class="form-label"><b>Debt repayments</b></label>
+                  <p class="expenses-description">Loan, credit card and finance repayments</p>
+                  <input type="number" class="form-control" id="validationServer06" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="other-essentials" class="form-label"><b>Other essentials</b></label>
+                  <p class="expenses-description">Childcare, school fees and transport (including fuel, maintenance, tax, 
+                    public transport) and any other outgoings that are part of your essential monthly spending</p>
+                  <input type="number" class="form-control" id="validationServer07" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="lifestyle-cost" class="form-label"><b>Lifestyle costs</b></label>
+                  <p class="expenses-description">Takeaways, hair appointments, socialising, gym membership, streaming services, gaming etc.<br>&nbsp</p>
+                  <input type="number" class="form-control" id="validationServer08" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="savings" class="form-label"><b>Savings</b></label>
+                  <p class="expenses-description">Contributions to savings each month</p>
+                  <input type="number" class="form-control" id="validationServer09">
+                </div>
+
+                <div class="col-md-6 d-grid">
+                  <label for="calculating" class="form-label"><b></b></label>
+                  <p class="calculate-button">&nbsp</p>
+                  <button class="btn btn-info" type="submit">Calculate</button>
+                </div>
+
+
+                  <!-- <div class="invalid-feedback">
+                    Please provide a valid city.
+                  </div> -->
+                </div>
+                
+              </form>
               </div>
             </div>
-          </div>
-          <div class="col-md-12">
-            <label for="validationServer03" class="form-label">City</label>
-            <input type="text" class="form-control is-invalid" id="validationServer03" required>
-            <div class="invalid-feedback">
-              Please provide a valid city.
-            </div>
-          </div>
-          <div class="col-md-12">
-            <label for="validationServer04" class="form-label">State</label>
-            <select class="form-select is-invalid" id="validationServer04" required>
-              <option selected disabled value="">Choose...</option>
-              <option>...</option>
-            </select>
-            <div class="invalid-feedback">
-              Please select a valid state.
-            </div>
-          </div>
-          <div class="col-md-12">
-            <label for="validationServer05" class="form-label">Zip</label>
-            <input type="text" class="form-control is-invalid" id="validationServer05" required>
-            <div class="invalid-feedback">
-              Please provide a valid zip.
-            </div>
-          </div>
-          <div class="col-md-12">
-          </div>
-          <div class="col-md-12">
-            <button class="btn btn-primary" type="submit">Submit form</button>
-          </div>
-        </form>
-        </div>
+          </article>
+        </section>
       </div>
-    </article>
-  </section>
-</div>
-    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/budgetplanner.js"></script>
+    </div>
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

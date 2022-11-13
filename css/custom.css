@@ -16,3 +16,7 @@
         padding-right: 5px;
     }
   }
+
+  .bd-example .row .col-md-6 .form-label{
+    padding-top: 25px;
+  }
