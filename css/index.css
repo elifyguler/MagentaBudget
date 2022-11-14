@@ -121,3 +121,14 @@ body {
     padding: 5px;
     font-style: italic;
   }
+
+  .save-money-title{
+    padding-top:10px;
+    padding-bottom: 15px;
+    color: #a62c62;
+    /* font-style: italic; */
+    }
+
+  .save-money-quotes{
+    font-style: italic;
+  }
