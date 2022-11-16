@@ -132,3 +132,21 @@ body {
   .save-money-quotes{
     font-style: italic;
   }
+
+.user_comment{
+    border-radius: 50%;
+  }
+
+.user_name{
+    color: #6f397f;
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.user-title{
+  padding-top:10px;
+  padding-bottom: 10px;
+  color: #a62c62;
+
+  /* font-style: italic; */
+  }
