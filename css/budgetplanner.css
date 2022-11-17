@@ -80,3 +80,19 @@ color: #a62c62;
 .expenses-description{
   font-size: 14px;
 }
+
+.mychartpie{
+  position: relative; 
+  margin:auto;
+}
+
+/* .mychartbar{
+  padding-top: 20px;;
+} */
+.my_expenses{
+  position: relative; 
+  margin:auto;
+}
+ .user_advice{
+  padding-top: 100px;
+} 

@@ -20,3 +20,8 @@
   .bd-example .row .col-md-6 .form-label{
     padding-top: 25px;
   }
+
+  .js-plotly-plot .plotly, .js-plotly-plot .plotly div
+  {
+    margin: auto;
+  }

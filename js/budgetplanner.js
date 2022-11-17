@@ -11,9 +11,9 @@ function calculateBudget(){
 
     let total_expenses = housing+insurance+grociers+entertainment+debt+other_essentials+lifestyle+savings;
 
-    alert(total_expenses);
 
-    if(monthly_income=="")
+
+    if(monthly_income == "")
     {
         alert("You have to enter your monthly income. Please enter it.")
     }
@@ -24,23 +24,40 @@ function calculateBudget(){
         alert("You have to enter your grociers expense. Please enter it.")
     }
     else{
-        housing1=housing*100/monthly_income;
-        insurance1=insurance*100/monthly_income;
-        grociers1=grociers*100/monthly_income;
-        entertainment1=entertainment*100/monthly_income;
-        debt1=debt*100/monthly_income;
-        other_essentials1=other_essentials*100/monthly_income;
-        lifestyle1=lifestyle*100/monthly_income;
-        savings1=savings*100/monthly_income;
+        housing1 = housing*100/monthly_income;
+        insurance1 = insurance*100/monthly_income;
+        grociers1 = grociers*100/monthly_income;
+        entertainment1 = entertainment*100/monthly_income;
+        debt1 = debt*100/monthly_income;
+        other_essentials1 = other_essentials*100/monthly_income;
+        lifestyle1 = lifestyle*100/monthly_income;
+        savings1 = savings*100/monthly_income;
+
+        let useradvice=document.getElementById('user_advice')
+        useradvice.innerText="All each expenses may different depending on the region you live in or any other things, but in general the average cost of renting a home in the UK is £755 per month.Statistics show that, the average gas and electricity bill was £111.6 per month per household £47.90 for gas, and £63.70 for electricity."
 
 
         if(monthly_income>total_expenses)
         {
-            let text = "Monthly income amount is more than expenses amount. Do you want me to add that extra money as saving?";
+            let text = "Monthly income amount is more than total expenses amount. Do you want me to add that extra money as saving?";
             if (confirm(text) == true) {
                 savings=savings+(monthly_income-total_expenses);
                 savings1=savings*100/monthly_income;
                 alert("Extra money added to saving!");
+
+                var yArray = [monthly_income,housing, insurance, grociers,entertainment,debt,other_essentials,lifestyle,savings];
+                var xArray = ['Monthly Income','Housing', 'Insurance', 'Grociers','Media and Entertainment','Debt repayments','Other essentials','Lifestyle','Savings'];
+
+                var expensesextrasavingbar = [{
+                x:xArray,
+                y:yArray,
+                type:"bar"
+                }];
+
+                var layout = {title:"My Budget's Summary"};
+
+                Plotly.newPlot("bar", expensesextrasavingbar, layout);
+
                 var expensesextrasaving = 
                 [{
                 values: [housing1, insurance1, grociers1,entertainment1,debt1,other_essentials1,lifestyle1,savings1],
@@ -54,18 +71,33 @@ function calculateBudget(){
                     width: 800
                 };
                   
-                  Plotly.newPlot('myDiv', expensesextrasaving, layout);
-                }
+                  Plotly.newPlot('chartpie', expensesextrasaving, layout);
+                
+            }
+
             else
                 {
                     alert("Extra money did not add to saving!");
-                    let unkown_money = parseInt(monthly_income-total_expenses);
-                    unkown_money1=unkown_money*100/monthly_income;
+                    let unknown_money = parseInt(monthly_income-total_expenses);
+                    unknown_money1=unknown_money*100/monthly_income;
 
-                    var expenses = 
+                    var yArray = [monthly_income,housing, insurance, grociers,entertainment,debt,other_essentials,lifestyle,savings,unkown_money];
+                    var xArray = ['Monthly Income','Housing', 'Insurance', 'Grociers','Media and Entertainment','Debt repayments','Other essentials','Lifestyle','Savings','Unknown'];
+  
+                    var expenseswithunknownbar = [{
+                    x:xArray,
+                    y:yArray,
+                    type:"bar"
+                    }];
+  
+                    var layout = {title:"My Budget's Summary"};
+  
+                    Plotly.newPlot("bar", expenseswithunknownbar, layout);
+
+                    var expenseswithunknown = 
                     [{
-                    values: [housing1, insurance1, grociers1,entertainment1,debt1,other_essentials1,lifestyle1,savings1,unkown_money1],
-                    labels: ['Housing', 'Insurance', 'Grociers','Media and Entertainment','Debt repayments','Other essentials','Lifestyle','Savings','Unknow'],
+                    values: [housing1, insurance1, grociers1,entertainment1,debt1,other_essentials1,lifestyle1,savings1,unknown_money1],
+                    labels: ['Housing', 'Insurance', 'Grociers','Media and Entertainment','Debt repayments','Other essentials','Lifestyle','Savings','Unknown'],
                     type: 'pie'
                     }];
                   
@@ -74,16 +106,30 @@ function calculateBudget(){
                     width: 800
                   };
                   
-                  Plotly.newPlot('myDiv', expenses, layout);
+                  Plotly.newPlot('chartpie', expenseswithunknown, layout);
+
                 }
                 
         }
-// let expenses_text = document.createElement('div');
-// expenses_text.innerText="I added new Paragraph";
-// document.body.appendChild(expenses_text)   
+
         else{
+            var yArray = [monthly_income,housing, insurance, grociers,entertainment,debt,other_essentials,lifestyle1,savings];
+            var xArray = ['Monthly Income','Housing', 'Insurance', 'Grociers','Media and Entertainment','Debt repayments','Other essentials','Lifestyle','Savings'];
+  
+            var expenses = [{
+            x:xArray,
+            y:yArray,
+            type:"bar"
+            }];
+  
+            var layout = {title:"My Budget's Summary"};
+  
+            Plotly.newPlot("bar", expenses, layout);
+
+
+
         var expenses = [{
-            values: [housing1, insurance1, grociers1,entertainment1,debt1,other_essentials1,lifestyle1,savings1],
+            values: [housing1, insurance1, grociers1, entertainment1,debt1,other_essentials1,lifestyle1,savings1],
             labels: ['Housing', 'Insurance', 'Grociers','Media and Entertainment','Debt repayments','Other essentials','Lifestyle','Savings'],
             type: 'pie'
           }];
@@ -93,6 +139,8 @@ function calculateBudget(){
             width: 800
           };
           
-          Plotly.newPlot('myDiv', expenses, layout);}
+          Plotly.newPlot('chartpie', expenses, layout);}
+
+
     }
 }
