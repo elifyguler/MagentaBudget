@@ -37,7 +37,7 @@ function calculateBudget(){
         let useradvice=document.getElementById('user_advice')
         useradvice.innerText="We are going to share with you the average prices in the UK but please don't forget these expenses may different depending on the region you live in. All numbers show monthly costs."
         let userhousing=document.getElementById('user_housing')
-        userhousing.innerText="The average monthly rent in the UK is now around £895 and £150 for council tax. Statistics show that, the average is £47.90 for gas, £63.70 for electricity and £34 for water so this informations show that the housing expenses avarage is £1190,6 a month."
+        userhousing.innerText="The average monthly rent in the UK is now around £895 and £150 for council tax. Statistics show that, the average is £47.90 for gas, £63.70 for electricity and £34 for water so this informations show that the housing expenses avarage is £1190,6 a month. You spend "+housing+" a month."
         let userinsurance=document.getElementById('user_insurance')
         userinsurance.innerText="The average cost of life insurance in the UK is currently £38.15.The average cost of car insurance £65."
         let usergrociers=document.getElementById('user_grociers')
