@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+    <meta name="viewport" content="width=device-width, initial=scale=1.0">
+    <title>Blog</title>   
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+            <body>
+      
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+              <symbol id="bootstrap" viewBox="0 0 118 94">
+                <title>Magenta</title>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+              </symbol>
+              <symbol id="home" viewBox="0 0 16 16">
+                <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+              </symbol>
+              <symbol id="blog" viewBox="0 0 16 16">
+                  <path d="M3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+                  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v1H1V2a1 1 0 0 1 1-1h12zm1 3v10a1 1 0 0 1-1 1h-2V4h3zm-4 0v11H2a1 1 0 0 1-1-1V4h10z"/>
+              </symbol>
+              <symbol id="people-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </symbol>
+              <symbol id="contact" viewBox="0 0 16 16">
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                </symbol>
+              <symbol id="calculator" viewBox="0 0 16 16">
+                <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/>
+                <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-4z"/>
+              </symbol>
+            </svg>
+            <header>
+              <!-- <div class="px-3 py-2 border-bottom mb-3">
+                <div class="container d-flex flex-wrap justify-content-center">
+                   <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
+                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                  </form> 
+          
+                  <div class="text-end">
+                    <button type="button" class="btn btn-secondary">Login</button>
+                    <button type="button" class="btn btn-secondary">Sign-up</button>
+                  </div>
+                </div>
+              </div> -->
+              <div class="px-3 py-2 bg-dark text-white">
+                <div class="container row mx-auto">            
+                  <div class="col-md-3">
+                  
+                  <img src="images/logo.png"  alt="Logo" width="200px" height="80px">
+                 </div>
+                  <div class="d-flex flex-wrap align-items-center justify-content-lg-end col">
+                    
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                      <div class="container-fluid col-md-12">
+        
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                          <ul class="navbar-nav " >
+                            
+                            <li class="nav-item">
+                              <a href="index.html"  class="nav-link" aria-current="page" >
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
+                                  Home
+                              </a>
+                            </li>
+        
+                            <!-- <li class="nav-item">
+                              <a href="myaccount.html" class="nav-link">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
+                                My Account
+                              </a>
+                            </li> -->
+        
+                            <li class="nav-item">
+                              <a href="budgetplanner.html" class="nav-link">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#calculator"/></svg>
+                                Budget Planner
+                              </a>
+                            </li>
+        
+                            <li class="nav-item">
+                              <a href="blog.html" class="nav-link active">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#blog"/></svg>
+                               Blog
+                              </a>
+                            </li>
+        
+                            <li class="nav-item">
+                              <a href="contactus.html" class="nav-link">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#contact"/></svg>
+                                Contact Us
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </nav>         
+                  </div>
+                </div>
+              </div>
+            </header>
+  <div class="Container"  style="
+        background-image: url('https://images.unsplash.com/photo-1538356111053-748a48e1acb8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1773&q=80');
+        height: 150vh;
+      ">   
+        <div class="container col-lg-12 main">
+      <div class="col-lg-12 post">
+                <div class="container">
+<br>
+                    <h2  class="ubuntu">How to save money fast: 4 tips to grow your savings</h2>
+                    <div class="body-text">
+
+                        <p class='text-muted ubuntu'>November 12, 2022</p>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6"><p>These 4 tips on how to save money fast can help you reach your savings targets without breaking a sweat. Saving and budgeting can seem stressful at first, but having a fixed goal can actually be a source of calm. It can help you visualize an exciting future in which you’ve bought your first house, started a family or even just splurged on something nice for yourself.</p>
+
+                              <p>So, if you’re wondering how to save money fast, here are our top suggestions on how to boost your bank balance quickly.</p></div>
+                            
+
+                        <div class="row">
+                            <div class="col-lg-12"><p><strong>1. Learn to budget and understand your finances</strong></p>
+                                <p>Our most important tip for saving money fast is pretty simple: Learn to budget. If you’re in control of your budget, you’re in control of your finances. But where to start?</p>
+
+                                <p>Before you can start saving money every month, you need to come to grips with your cash flow. This means understanding all of your incoming and outgoing revenue streams, including any debt repayments, monthly bills and savings contributions.</p></div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-lg-12"><p><strong>2. Create a designated savings account</strong></p>
+                                <p>To save money fast, you need to separate the money you spend on your daily needs from the money you intend to save. This means setting up a designated savings account.</p> 
+
+                                <p>By doing so, you minimize the risk of you dipping into your savings funds to cover daily expenses. Instead, it encourages you to stick within your day-to-day budget while keeping your savings safe from temptation!</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12"><p><strong>3. Use the envelope budgeting system</strong></p>
+                                <p>Another great life hack to help you save money fast is to use Dave Ramsey’s envelope budgeting system. This means taking your monthly income out of the bank in physical cash (yes, all of it!) at the beginning of each month and allocating it into separate envelopes.</p>
+
+                                <p>Each of these envelopes should represent one of your budgeting goals. So, you’ll have envelopes for your fixed costs (e.g., rent, utility bills), and envelopes for your variable costs (e.g., clothes shopping, eating out, groceries). By paying for everything with a fixed amount of physical cash, you’ll ensure that you stay within a certain budget for each expense type.</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12"><p><strong>4. Cancel any unused subscriptions</strong></p>
+                                <p>Subscriptions are a money-making dream for a lot of companies. This is because once a customer subscribes to their service, they’re more reluctant to cancel their subscription—even if they hardly ever use it.</p>
+                                <p>This, in large part, is due to the sunk-cost fallacy. When applied to a subscription service, the sunk-cost fallacy means that cancelling a rarely used subscription is hard, as you’ve already paid so much money for it. Therefore, canceling the subscription would mean accepting that all the money spent on it up until that point has been wasted. But, by delaying canceling the subscription, it still feels like there’s a chance the service might eventually be used.</p>
+                                <p>In general, though, few of us ever fully use our subscription services to their fullest. So, it’s more cost-effective to cancel any unused subscriptions now, rather than hold out for a time when you may hypothetically use it.</p>
+                            </div>
+                          </div>
+                      
+                    </div>
+                </div>
+            </div>
+  </div>
+
+
+</div> 
+
+   <hr class="featurette-divider">  
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy;2022 Code First Girls & NatWest - Team Magenta-  Elif Guler - Iman Ben - Leonida Palushaj&middot; 
+      <!-- <a href="#">Privacy</a> &middot; <a href="#">Terms</a> -->
+    </p>
+  </footer>
+
+<script src="https://use.fontawesome.com/1dec14be15.js"></script>
+  </body>
+
+
+</html>

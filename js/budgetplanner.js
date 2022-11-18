@@ -33,9 +33,21 @@ function calculateBudget(){
         lifestyle1 = lifestyle*100/monthly_income;
         savings1 = savings*100/monthly_income;
 
-        let useradvice=document.getElementById('user_advice')
-        useradvice.innerText="All each expenses may different depending on the region you live in or any other things, but in general the average cost of renting a home in the UK is £755 per month.Statistics show that, the average gas and electricity bill was £111.6 per month per household £47.90 for gas, and £63.70 for electricity."
 
+        let useradvice=document.getElementById('user_advice')
+        useradvice.innerText="We are going to share with you the average prices in the UK but please don't forget these expenses may different depending on the region you live in. All numbers show monthly costs."
+        let userhousing=document.getElementById('user_housing')
+        userhousing.innerText="The average monthly rent in the UK is now around £895 and £150 for council tax. Statistics show that, the average is £47.90 for gas, £63.70 for electricity and £34 for water so this informations show that the housing expenses avarage is £1190,6 a month."
+        let userinsurance=document.getElementById('user_insurance')
+        userinsurance.innerText="The average cost of life insurance in the UK is currently £38.15.The average cost of car insurance £65."
+        let usergrociers=document.getElementById('user_grociers')
+        usergrociers.innerText="The average spend on food per person is around £189 per month, including groceries and eating out—across all ages and genders. "
+        let userentertainment=document.getElementById('user_entertainment')
+        userentertainment.innerText="Media and entertainment costs around £95 a month."
+        let usersaving=document.getElementById('user_saving')
+        usersaving.innerText="The average savings per month UK is £450 per household."
+        let userlifestyle=document.getElementById('user_lifestyle')
+        userlifestyle.innerText="In general: A single person with no children spend around £1,400 a month to live on. A couple with no children spend around £2,100 a month. A couple with 2 children in primary school spend around £3,460 a month."
 
         if(monthly_income>total_expenses)
         {
@@ -81,7 +93,7 @@ function calculateBudget(){
                     let unknown_money = parseInt(monthly_income-total_expenses);
                     unknown_money1=unknown_money*100/monthly_income;
 
-                    var yArray = [monthly_income,housing, insurance, grociers,entertainment,debt,other_essentials,lifestyle,savings,unkown_money];
+                    var yArray = [monthly_income,housing, insurance, grociers,entertainment,debt,other_essentials,lifestyle,savings,unknown_money];
                     var xArray = ['Monthly Income','Housing', 'Insurance', 'Grociers','Media and Entertainment','Debt repayments','Other essentials','Lifestyle','Savings','Unknown'];
   
                     var expenseswithunknownbar = [{

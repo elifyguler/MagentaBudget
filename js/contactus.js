@@ -4,7 +4,7 @@ function contactform()
   var customerfullname = document.getElementById("customer_name").value + " " +document.getElementById("customer_lastname").value;
   var message = document.getElementById("customer_message").value;
 
-  let information = "name="+customerfullname+"&kmail="+customeremail+"&message="+message + "&subject=Your message is arrived to us.";
+  let information = "name="+customerfullname+"&kmail="+customeremail+"&message="+message + "&subject=Your message is arrived to us. We will get back to you as soon as possible";
 
 
   let url = "https://besttraveladvice.co.uk/mailsend/budgetemail.php?";
@@ -25,6 +25,7 @@ else{
       
          else
          {
+          alert(req.responseText);
               document.getElementById("alert").style.display="block";
           } 
       }
