@@ -7,12 +7,12 @@ function contactform()
   let information = "name="+customerfullname+"&kmail="+customeremail+"&message="+message + "&subject=Your message is arrived to us. We will get back to you as soon as possible";
 
 
-  let url = "https://besttraveladvice.co.uk/mailsend/budgetemail.php?";
+let url = "https://besttraveladvice.co.uk/mailsend/budgetemail.php?";
 
 //check value is empty or not
   if (customeremail=="" || message=="")
   {
-    alert("You have to enter your email and message. Please enter them.")
+    alert("You have to enter your information and your message. Please enter them.")
   }
 else{
   var req = new XMLHttpRequest();
@@ -24,15 +24,17 @@ else{
           }
       
          else
-         {
-          alert(req.responseText);
+         {  
               document.getElementById("alert").style.display="block";
           } 
       }
     } 
+
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-  };
+
+  };  
+
   req.open("GET", url+information, true);
   req.send();
 
