@@ -41,7 +41,7 @@ function calculateBudget(){
                 savings=savings+(monthly_income-total_expenses);
                 savings1=savings*100/monthly_income;
                 alert("Extra money added to saving!");
-                advice();
+                advice(savings);
 
                 var yArray = [monthly_income,housing, insurance, grociers,entertainment,debt,other_essentials,lifestyle,savings];
                 var xArray = ['Monthly Income','Housing', 'Insurance', 'Grociers','Media and Entertainment','Debt repayments','Other essentials','Lifestyle','Savings'];
@@ -75,7 +75,7 @@ function calculateBudget(){
 
             else
                 {
-                    advice();
+                    advice(savings);
                     alert("Extra money did not add to saving!");
                     let unknown_money = parseInt(monthly_income-total_expenses);
                     unknown_money1=unknown_money*100/monthly_income;
@@ -113,7 +113,7 @@ function calculateBudget(){
 
         else{
 
-            advice();
+            advice(savings);
             var yArray = [monthly_income,housing, insurance, grociers,entertainment,debt,other_essentials,lifestyle1,savings];
             var xArray = ['Monthly Income','Housing', 'Insurance', 'Grociers','Media and Entertainment','Debt repayments','Other essentials','Lifestyle','Savings'];
   
@@ -146,16 +146,12 @@ function calculateBudget(){
     }
 }
 
-function advice(){
-    let monthly_income = parseInt(document.getElementById('monthly_income').value);
+function advice(savings){
     let housing = parseInt(document.getElementById('housing').value);
     let insurance = parseInt(document.getElementById('insurance').value);
     let grociers = parseInt(document.getElementById('grociers').value);
     let entertainment = parseInt(document.getElementById('entertainment').value);
-    let debt = parseInt(document.getElementById('debt').value);
-    let other_essentials = parseInt(document.getElementById('other_essentials').value);
-    let lifestyle = parseInt(document.getElementById('lifestyle').value);
-    let savings = parseInt(document.getElementById('savings').value);
+    // let savings = parseInt(document.getElementById('savings').value);
 
 
 
